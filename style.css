@@ -19,8 +19,6 @@ div {
 
 #play {
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
     border: 0.3vh solid lightslategray;
     border-radius: 3vh;
     background-color: rgb(173, 192, 211);
