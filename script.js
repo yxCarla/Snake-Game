@@ -1,14 +1,34 @@
 var play = document.getElementById('play');
+var info = document.getElementById('info');
+
 
 play.addEventListener('click', startGame);
 
 function startGame() {
     main();
     gen_food();
+    hide();
+    let score = document.getElementById('score');
+
+    score.style.display = 'block';
+
+    let gameCanvas = document.getElementById('gameCanvas');
+
+    gameCanvas.style.top = '50%';
+}
+function hideScore() {
+    let score = document.getElementById('score');
+
+    score.style.display = 'none';
 }
 
-const board_border = 'black';
-const board_background = "white";
+function hide() {
+    play.style.display = 'none';
+    info.style.display = 'none';
+}
+
+const board_border = 'rgb(221, 218, 218)';
+const board_background = 'rgb(221, 218, 218)';
 const snake_col = 'rgb(173, 192, 211)';
 const snake_border = 'lightslategray';
 
@@ -121,22 +141,23 @@ function has_game_ended() {
     const hitBottomWall = snake[0].y > gameCanvas.height - 10;
 
     if (hitBottomWall) {
-        play.style.display = 'block';
+        
         alert('Your score was' + ' ' + score + '!' + ' ' + 'Refresh the screen to play again!');
+
     }
 
     if (hitLeftWall) {
-        play.style.display = 'block';
+        
         alert('Your score was' + ' ' + score + '!' + ' ' + 'Refresh the screen to play again!');
     }
 
     if (hitRightWall) {
-        play.style.display = 'block';
+        
         alert('Your score was' + ' ' + score + '!' + ' ' + 'Refresh the screen to play again!');
     }
     
     if (hitTopWall) {
-        play.style.display = 'block';
+        
         alert('Your score was' + ' ' + score + '!' + ' ' + 'Refresh the screen to play again!');
     }
 
@@ -146,11 +167,7 @@ function has_game_ended() {
 }
 
 function change_direction(event) {  
-    const LEFT_KEY = 65;
-    const RIGHT_KEY = 68;
-    const UP_KEY = 87;
-    const DOWN_KEY = 83;
-
+    
     if (changing_direction) return;
         changing_direction = true;
 
@@ -160,23 +177,40 @@ function change_direction(event) {
     const goingRight = dx === 10;  
     const goingLeft = dx === -10;
 
-        if (keyPressed === LEFT_KEY && !goingRight) {    
+        if (keyPressed === 65 && !goingRight) {    
+            dx = -10;
+            dy = 0;  
+        }
+        if (keyPressed === 37 && !goingRight) {    
             dx = -10;
             dy = 0;  
         }
 
-        if (keyPressed === UP_KEY && !goingDown) {    
+        if (keyPressed === 87 && !goingDown) {    
+            dx = 0;
+            dy = -10;
+        }
+        if (keyPressed === 38 && !goingDown) {    
             dx = 0;
             dy = -10;
         }
 
-        if (keyPressed === RIGHT_KEY && !goingLeft) {    
+        if (keyPressed === 68 && !goingLeft ) {    
             dx = 10;
             dy = 0;
         }
-
-        if (keyPressed === DOWN_KEY && !goingUp) {    
+        if (keyPressed === 39 && !goingLeft ) {    
+            dx = 10;
+            dy = 0;
+        }
+        if (keyPressed === 83 && !goingUp ) {    
             dx = 0;
             dy = 10;
         }
+
+        if (keyPressed === 40 && !goingUp ) {    
+            dx = 0;
+            dy = 10;
+        }
+
 }

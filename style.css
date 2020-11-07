@@ -1,32 +1,50 @@
+body {
+    background-color: rgb(39, 36, 36);
+}
+
 #gameCanvas {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+#main {
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+}
+#info {
+    font-family: 'Cute Font';
+    font-size: 3vh;
+    width: 30vw;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    color: white;
+}
 #heading {
     text-align: center;
     font-size: 7.5vh;
     font-family: 'Cute Font';
+    color: white;
 }
 
 #score {
     font-size: 4.5vh;
-    text-align: center;
+    color: rgb(238, 65, 65);
     font-family: 'Cute Font';
 }
 
 #play {
     text-align: center;
     border: 0.3vh solid lightslategray;
-    border-radius: 3vh;
     background-color: rgb(173, 192, 211);
-    width: 6vw;
+    width: 4vw;
     font-family: 'Cute Font';
     font-size: 3.3vh;
     user-select: none;
     cursor: pointer;
+    
 }
 
 #play:hover {

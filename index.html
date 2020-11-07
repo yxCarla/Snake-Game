@@ -4,16 +4,22 @@
         <title>Snake Game</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=initial-width">
-        <meta name="description" content="Play the Snake Game! Use WASD keys to guide the snake!">
+        <meta name="description" content="Play the Snake Game!">
         <script src="script.js" defer></script>
         <link href="style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cute Font" rel="stylesheet">
     </head>
-    <body>
+    <body onload="hideScore()">
         <div id="heading">Snake Game</div>
-        <div id="score">
-            Score: 0
-            <button id="play">Play</button>
+        <div id="info">Welcome to the Snake Game. Navigate your snake with arrow keys or WASD keys, and try to collect the red cubes of food
+            without hitting yourself or the walls!</div>
+        <div id="main">
+            
+            <div id="score1">
+                <span id="score">Score: 0</span>
+                
+                <button id="play">Play</button>
+            </div>
         </div>
         <canvas id="gameCanvas" width="400" height="400"></canvas>
     </body>
