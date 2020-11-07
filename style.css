@@ -7,7 +7,7 @@
 
 div {
     text-align: center;
-    font-size: 8h;
+    font-size: 8vh;
     font-family: 'Cute Font';
 }
 
@@ -22,9 +22,9 @@ div {
     border: 0.3vh solid lightslategray;
     border-radius: 3vh;
     background-color: rgb(173, 192, 211);
-    width: 7vw;
+    width: 6vw;
     font-family: 'Cute Font';
-    font-size: 3.5vh;
+    font-size: 3.3vh;
     user-select: none;
     cursor: pointer;
 }
