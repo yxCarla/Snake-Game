@@ -9,8 +9,8 @@ function startGame() {
 
 const board_border = 'black';
 const board_background = "white";
-const snake_col = 'lightblue';
-const snake_border = 'darkblue';
+const snake_col = 'rgb(173, 192, 211)';
+const snake_border = 'lightslategray';
 
 let snake = [{x: 200, y: 200},  {x: 190, y: 200},  {x: 180, y: 200},  {x: 170, y: 200},  {x: 160, y: 200},];
 
@@ -61,15 +61,15 @@ function drawSnake() {
 }
 
 function drawFood() {
-    gameCanvas_ctx.fillStyle = 'lightgreen';
-    gameCanvas_ctx.strokestyle = 'darkgreen';
+    gameCanvas_ctx.fillStyle = 'rgb(238, 65, 65)';
+    gameCanvas_ctx.strokeStyle = 'rgb(174, 4, 4)';
     gameCanvas_ctx.fillRect(food_x, food_y, 10, 10);
     gameCanvas_ctx.strokeRect(food_x, food_y, 10, 10);
 }
 
 function drawSnakePart(snakePart) {  
-    gameCanvas_ctx.fillStyle = 'lightblue';  
-    gameCanvas_ctx.strokestyle = 'darkblue';
+    gameCanvas_ctx.fillStyle = 'rgb(173, 192, 211)';  
+    gameCanvas_ctx.strokeStyle = 'lightslategray';
     gameCanvas_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);  
     gameCanvas_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }

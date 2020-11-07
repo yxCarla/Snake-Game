@@ -7,7 +7,7 @@
 
 div {
     text-align: center;
-    font-size: 8vh;
+    font-size: 9vh;
     font-family: 'Cute Font';
 }
 
@@ -21,9 +21,18 @@ div {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    border: 0.3vh solid black;
+    border: 0.3vh solid lightslategray;
     border-radius: 3vh;
+    background-color: rgb(173, 192, 211);
     width: 7vw;
     font-family: 'Cute Font';
     font-size: 3.5vh;
+    user-select: none;
+    cursor: pointer;
+}
+
+#play:hover {
+    background-color: black;
+    color: rgb(173, 192, 211);
+    transition: 0.4s;
 }
